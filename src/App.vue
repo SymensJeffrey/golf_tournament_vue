@@ -14,6 +14,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Enter Score</a>
               </li>
+              <li class="nav-item">
+                <a class= "nav-link" href="/signup">Signup</a>
+              </li>
             </ul>
           </div>
         </div>
