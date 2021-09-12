@@ -14,13 +14,13 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Enter Score</a>
               </li>
-              <li class="nav-item">
+              <li v-if="!isLoggedIn()" class="nav-item">
                 <a class= "nav-link" href="/signup">Signup</a>
               </li>
-              <li class="nav-item">
+              <li v-if="!isLoggedIn()"class="nav-item">
                 <a class= "nav-link" href="/login">Login</a>
               </li>
-              <li class="nav-item">
+              <li v-if="isLoggedIn()" class="nav-item">
                 <a class="nav-link" href="/logout">Logout</a>
               </li>
             </ul>
@@ -34,3 +34,17 @@
 <style>
 
 </style>
+
+<script>
+export default {
+  methods: {
+    isLoggedIn: function() {
+      if (localStorage.getItem("jwt")) {
+        return true;
+      } else {
+        return false;
+      }      
+    }
+  }
+}
+</script>
