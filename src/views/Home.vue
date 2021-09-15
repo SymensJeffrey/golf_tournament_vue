@@ -7,6 +7,7 @@
           {{golfCourseName}}
         </div>
       </div>
+      <!-- Holes -->
       <div class="row">
         <div class="col">
           Hole
@@ -75,6 +76,7 @@
           Total
         </div>
       </div>
+      <!-- Par -->
       <div class="row">
         <div class="col">
           Par
@@ -181,6 +183,10 @@
         frontsidePar: 0,
         backsidePar: 0,
         totalPar: 0,
+        player1: "",
+        player2: "",
+        player3: "",
+        player4: "",
 
       };
     },
