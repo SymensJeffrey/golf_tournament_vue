@@ -159,10 +159,38 @@
     data: function () {
       return {
         message: "Welcome to the 2022 Symens Open",
-        golfCourseName: "Pebble Beach"
+        golfCourseName: "Pebble Beach",
+        hole1Par: 4,
+        hole2Par: 4,
+        hole3Par: 4,
+        hole4Par: 4,
+        hole5Par: 4,
+        hole6Par: 4,
+        hole7Par: 4,
+        hole8Par: 4,
+        hole9Par: 4,
+        hole10Par: 4,
+        hole11Par: 4,
+        hole12Par: 4,
+        hole13Par: 4,
+        hole14Par: 4,
+        hole15Par: 4,
+        hole16Par: 4,
+        hole17Par: 4,
+        hole18Par: 4,
+        frontsidePar: 0,
+        backsidePar: 0,
+        totalPar: 0,
+
       };
     },
-    created: function () {},
-    methods: {},
+    created: function () {
+      this.frontsideParCalc();
+    },
+    methods: {
+      frontsideParCalc: function() {
+        this.frontsidePar = this.hole1Par + this.hole2Par + this.hole3Par + this.hole4Par + this.hole5Par + this.hole6Par + this.hole7Par + this.hole8Par + this.hole9Par
+      },
+    },
   };
 </script>
