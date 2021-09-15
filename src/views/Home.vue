@@ -187,6 +187,7 @@
     created: function () {
       this.frontsideParCalc();
       this.backsideParCalc();
+      this.totalParCalc();
     },
     methods: {
       frontsideParCalc: function() {
@@ -194,6 +195,9 @@
       },
       backsideParCalc: function() {
         this.backsidePar = this.hole10Par + this.hole11Par + this.hole12Par + this.hole13Par + this.hole14Par + this.hole15Par + this.hole16Par + this.hole17Par + this.hole18Par
+      },
+      totalParCalc: function() {
+        this.totalPar = this.frontsidePar + this.backsidePar
       },
     },
   };
