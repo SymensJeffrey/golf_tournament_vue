@@ -75,6 +75,74 @@
           Total
         </div>
       </div>
+      <div class="row">
+        <div class="col">
+          Par
+        </div>
+        <div class="col">
+          {{hole1Par}}
+        </div>
+        <div class="col">
+          {{hole2Par}}
+        </div>
+        <div class="col">
+          {{hole3Par}}
+        </div>
+        <div class="col">
+          {{hole4Par}}
+        </div>
+        <div class="col">
+          {{hole5Par}}
+        </div>
+        <div class="col">
+          {{hole6Par}}
+        </div>
+        <div class="col">
+          {{hole7Par}}
+        </div>
+        <div class="col">
+          {{hole8Par}}
+        </div>
+        <div class="col">
+          {{hole9Par}}
+        </div>
+        <div class="col">
+          {{frontsidePar}}
+        </div>
+        <div class="col">
+          {{hole10Par}}
+        </div>
+        <div class="col">
+          {{hole11Par}}
+        </div>
+        <div class="col">
+          {{hole12Par}}
+        </div>
+        <div class="col">
+          {{hole13Par}}
+        </div>
+        <div class="col">
+          {{hole14Par}}
+        </div>
+        <div class="col">
+          {{hole15Par}}
+        </div>
+        <div class="col">
+          {{hole16Par}}
+        </div>
+        <div class="col">
+          {{hole17Par}}
+        </div>
+        <div class="col">
+          {{hole1Par}}
+        </div>
+         <div class="col">
+          {{backsidePar}}
+        </div>
+         <div class="col">
+          {{totalPar}}
+        </div>
+      </div>
     </div>
   </div>
 </template>
