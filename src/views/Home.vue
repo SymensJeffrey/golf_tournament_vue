@@ -186,10 +186,14 @@
     },
     created: function () {
       this.frontsideParCalc();
+      this.backsideParCalc();
     },
     methods: {
       frontsideParCalc: function() {
         this.frontsidePar = this.hole1Par + this.hole2Par + this.hole3Par + this.hole4Par + this.hole5Par + this.hole6Par + this.hole7Par + this.hole8Par + this.hole9Par
+      },
+      backsideParCalc: function() {
+        this.backsidePar = this.hole10Par + this.hole11Par + this.hole12Par + this.hole13Par + this.hole14Par + this.hole15Par + this.hole16Par + this.hole17Par + this.hole18Par
       },
     },
   };
