@@ -164,7 +164,7 @@
   export default {
     data: function () {
       return {
-        message: "Welcome to the 2022 Symens Open",
+        message: "Welcome to Golf Tracker",
         hole1Par: 4,
         hole2Par: 4,
         hole3Par: 4,
