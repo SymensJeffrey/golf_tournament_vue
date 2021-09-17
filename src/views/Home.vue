@@ -153,6 +153,7 @@
   border-width: 1px;
 }
 .row{
+  text-align: center;
   min-width: 1200px;
   resize: none;
   overflow: scroll;
