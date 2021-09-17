@@ -151,8 +151,14 @@
 
 <style>
 .col{
+  min-width: 30px;
   border-style: solid;
   border-width: 1px;
+}
+.row{
+  min-width: 1200px;
+  resize: none;
+  overflow: scroll;
 }
 </style>
 
