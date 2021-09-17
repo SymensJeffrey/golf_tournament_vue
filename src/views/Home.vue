@@ -3,9 +3,6 @@
     <h1>{{ message }}</h1>
     <div class="container">
       <div class="row">
-        <div class="col">
-          {{golfCourseName}}
-        </div>
       </div>
       <!-- Holes -->
       <div class="row">
@@ -167,7 +164,6 @@
     data: function () {
       return {
         message: "Welcome to the 2022 Symens Open",
-        golfCourseName: "Pebble Beach",
         hole1Par: 4,
         hole2Par: 4,
         hole3Par: 4,
