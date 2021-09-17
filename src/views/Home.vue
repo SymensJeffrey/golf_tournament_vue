@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>{{ message }}</h1>
+    <h1 class="title-center-text">{{ message }}</h1>
     <div class="container">
       <div class="row">
       </div>
@@ -157,6 +157,10 @@
   min-width: 1200px;
   resize: none;
   overflow: scroll;
+}
+.title-center-text{
+  text-align: center;
+  padding-bottom: 15px;
 }
 </style>
 
