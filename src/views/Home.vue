@@ -186,11 +186,6 @@
         frontsidePar: 0,
         backsidePar: 0,
         totalPar: 0,
-        player1: "",
-        player2: "",
-        player3: "",
-        player4: "",
-
       };
     },
     created: function () {
