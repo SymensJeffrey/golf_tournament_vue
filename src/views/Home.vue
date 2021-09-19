@@ -213,6 +213,77 @@
           </div>
         </div>
       </div>
+      <!-- Player 2 -->
+      <div v-for="player2 in player2s" v-bind:key="player2.id">
+        <div class="row">
+          <div class="col">
+            Player 2
+          </div>
+          <div class="col">
+            {{player2.hole1}}
+          </div>
+          <div class="col">
+            {{player2.hole2}}
+          </div>
+          <div class="col">
+            {{player2.hole3}}
+          </div>
+          <div class="col">
+            {{player2.hole4}}
+          </div>
+          <div class="col">
+            {{player2.hole5}}
+          </div>
+          <div class="col">
+            {{player2.hole6}}
+          </div>
+          <div class="col">
+            {{player2.hole7}}
+          </div>
+          <div class="col">
+            {{player2.hole8}}
+          </div>
+          <div class="col">
+            {{player2.hole9}}
+          </div>
+          <div class="col">
+            {{frontsidePar}}
+          </div>
+          <div class="col">
+            {{player2.hole10}}
+          </div>
+          <div class="col">
+            {{player2.hole11}}
+          </div>
+          <div class="col">
+            {{player2.hole12}}
+          </div>
+          <div class="col">
+            {{player2.hole13}}
+          </div>
+          <div class="col">
+            {{player2.hole14}}
+          </div>
+          <div class="col">
+            {{player2.hole15}}
+          </div>
+          <div class="col">
+            {{player2.hole16}}
+          </div>
+          <div class="col">
+            {{player2.hole17}}
+          </div>
+          <div class="col">
+            {{player2.hole18}}
+          </div>
+          <div class="col">
+            {{backsidePar}}
+          </div>
+          <div class="col">
+            {{totalPar}}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -263,7 +334,7 @@
         backsidePar: 0,
         totalPar: 0,
         player1s: [],
-        player1Frontside: 0,
+        player2s: [],
       };
     },
     created: function () {
@@ -271,6 +342,7 @@
       this.backsideParCalc();
       this.totalParCalc();
       this.player1Index();
+      this.player2Index();
     },
     methods: {
       frontsideParCalc: function() {
@@ -287,7 +359,13 @@
           console.log("player 1 index", response);
           this.player1s = response.data
         })
-      }
+      },
+      player2Index: function() {
+        axios.get("/player2s").then((response) => {
+          console.log("player 2 index", response);
+          this.player2s = response.data
+        })
+      },
     },
   };
 </script>
