@@ -143,7 +143,7 @@
         </div>
       </div>
       <!-- Player 1 -->
-      <div v-for="player1 in player1s" v-bind:key="player1.id">
+      <div v-for="player1 in player1s">
         <div class="row">
           <div class="col">
             Player 1
@@ -214,7 +214,7 @@
         </div>
       </div>
       <!-- Player 2 -->
-      <div v-for="player2 in player2s" v-bind:key="player2.id">
+      <div v-for="player2 in player2s">
         <div class="row">
           <div class="col">
             Player 2
@@ -284,6 +284,77 @@
           </div>
         </div>
       </div>
+      <!-- Player 3 -->
+      <div v-for="player3 in player3s">
+        <div class="row">
+          <div class="col">
+            Player 3
+          </div>
+          <div class="col">
+            {{player3.hole1}}
+          </div>
+          <div class="col">
+            {{player3.hole2}}
+          </div>
+          <div class="col">
+            {{player3.hole3}}
+          </div>
+          <div class="col">
+            {{player3.hole4}}
+          </div>
+          <div class="col">
+            {{player3.hole5}}
+          </div>
+          <div class="col">
+            {{player3.hole6}}
+          </div>
+          <div class="col">
+            {{player3.hole7}}
+          </div>
+          <div class="col">
+            {{player3.hole8}}
+          </div>
+          <div class="col">
+            {{player3.hole9}}
+          </div>
+          <div class="col">
+            {{frontsidePar}}
+          </div>
+          <div class="col">
+            {{player3.hole10}}
+          </div>
+          <div class="col">
+            {{player3.hole11}}
+          </div>
+          <div class="col">
+            {{player3.hole12}}
+          </div>
+          <div class="col">
+            {{player3.hole13}}
+          </div>
+          <div class="col">
+            {{player3.hole14}}
+          </div>
+          <div class="col">
+            {{player3.hole15}}
+          </div>
+          <div class="col">
+            {{player3.hole16}}
+          </div>
+          <div class="col">
+            {{player3.hole17}}
+          </div>
+          <div class="col">
+            {{player3.hole18}}
+          </div>
+          <div class="col">
+            {{backsidePar}}
+          </div>
+          <div class="col">
+            {{totalPar}}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -335,6 +406,7 @@
         totalPar: 0,
         player1s: [],
         player2s: [],
+        player3s: [],
       };
     },
     created: function () {
@@ -343,6 +415,7 @@
       this.totalParCalc();
       this.player1Index();
       this.player2Index();
+      this.player3Index();
     },
     methods: {
       frontsideParCalc: function() {
@@ -364,6 +437,12 @@
         axios.get("/player2s").then((response) => {
           console.log("player 2 index", response);
           this.player2s = response.data
+        })
+      },
+      player3Index: function() {
+        axios.get("/player3s").then((response) => {
+          console.log("player 3 index", response);
+          this.player3s = response.data
         })
       },
     },
