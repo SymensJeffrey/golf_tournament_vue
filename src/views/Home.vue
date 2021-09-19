@@ -355,6 +355,77 @@
           </div>
         </div>
       </div>
+      <!-- Player 4 -->
+      <div v-for="player4 in player4s">
+        <div class="row">
+          <div class="col">
+            Player 4
+          </div>
+          <div class="col">
+            {{player4.hole1}}
+          </div>
+          <div class="col">
+            {{player4.hole2}}
+          </div>
+          <div class="col">
+            {{player4.hole3}}
+          </div>
+          <div class="col">
+            {{player4.hole4}}
+          </div>
+          <div class="col">
+            {{player4.hole5}}
+          </div>
+          <div class="col">
+            {{player4.hole6}}
+          </div>
+          <div class="col">
+            {{player4.hole7}}
+          </div>
+          <div class="col">
+            {{player4.hole8}}
+          </div>
+          <div class="col">
+            {{player4.hole9}}
+          </div>
+          <div class="col">
+            {{frontsidePar}}
+          </div>
+          <div class="col">
+            {{player4.hole10}}
+          </div>
+          <div class="col">
+            {{player4.hole11}}
+          </div>
+          <div class="col">
+            {{player4.hole12}}
+          </div>
+          <div class="col">
+            {{player4.hole13}}
+          </div>
+          <div class="col">
+            {{player4.hole14}}
+          </div>
+          <div class="col">
+            {{player4.hole15}}
+          </div>
+          <div class="col">
+            {{player4.hole16}}
+          </div>
+          <div class="col">
+            {{player4.hole17}}
+          </div>
+          <div class="col">
+            {{player4.hole18}}
+          </div>
+          <div class="col">
+            {{backsidePar}}
+          </div>
+          <div class="col">
+            {{totalPar}}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -407,6 +478,7 @@
         player1s: [],
         player2s: [],
         player3s: [],
+        player4s: [],
       };
     },
     created: function () {
@@ -416,6 +488,7 @@
       this.player1Index();
       this.player2Index();
       this.player3Index();
+      this.player4Index();
     },
     methods: {
       frontsideParCalc: function() {
@@ -443,6 +516,12 @@
         axios.get("/player3s").then((response) => {
           console.log("player 3 index", response);
           this.player3s = response.data
+        })
+      },
+      player4Index: function() {
+        axios.get("/player4s").then((response) => {
+          console.log("player 4 index", response);
+          this.player4s = response.data
         })
       },
     },
