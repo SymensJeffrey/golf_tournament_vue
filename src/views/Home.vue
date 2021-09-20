@@ -206,7 +206,7 @@
             {{player1.hole18}}
           </div>
           <div class="col">
-            {{backsidePar}}
+            {{player1Back}}
           </div>
           <div class="col">
             {{totalPar}}
@@ -477,6 +477,7 @@
         totalPar: 0,
         player1s: [],
         player1Front: 0,
+        player1Back: 0,
         player2s: [],
         player3s: [],
         player4s: [],
@@ -506,6 +507,7 @@
           console.log("player 1 index", response);
           this.player1s = response.data
           this.player1Front = response.data[0].hole1 + response.data[0].hole2 + response.data[0].hole3 + response.data[0].hole4 + response.data[0].hole5 + response.data[0].hole6 + response.data[0].hole7 + response.data[0].hole8 + response.data[0].hole9
+          this.player1Back = response.data[0].hole10 + response.data[0].hole11 + response.data[0].hole12 + response.data[0].hole13 + response.data[0].hole14 + response.data[0].hole15 + response.data[0].hole16 + response.data[0].hole17 + response.data[0].hole18
         })
       },
       player2Index: function() {
