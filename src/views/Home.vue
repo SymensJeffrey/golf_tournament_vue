@@ -209,7 +209,7 @@
             {{player1Back}}
           </div>
           <div class="col">
-            {{totalPar}}
+            {{player1Total}}
           </div>
         </div>
       </div>
@@ -247,7 +247,7 @@
             {{player2.hole9}}
           </div>
           <div class="col">
-            {{frontsidePar}}
+            {{player2Front}}
           </div>
           <div class="col">
             {{player2.hole10}}
@@ -277,10 +277,10 @@
             {{player2.hole18}}
           </div>
           <div class="col">
-            {{backsidePar}}
+            {{player2Back}}
           </div>
           <div class="col">
-            {{totalPar}}
+            {{player2Total}}
           </div>
         </div>
       </div>
@@ -478,7 +478,11 @@
         player1s: [],
         player1Front: 0,
         player1Back: 0,
+        playe1Total: 0,
         player2s: [],
+        player2Front: 0,
+        player2Back: 0,
+        playe2Total: 0,
         player3s: [],
         player4s: [],
       };
@@ -508,12 +512,16 @@
           this.player1s = response.data
           this.player1Front = response.data[0].hole1 + response.data[0].hole2 + response.data[0].hole3 + response.data[0].hole4 + response.data[0].hole5 + response.data[0].hole6 + response.data[0].hole7 + response.data[0].hole8 + response.data[0].hole9
           this.player1Back = response.data[0].hole10 + response.data[0].hole11 + response.data[0].hole12 + response.data[0].hole13 + response.data[0].hole14 + response.data[0].hole15 + response.data[0].hole16 + response.data[0].hole17 + response.data[0].hole18
+          this.player1Total = this.player1Front + this.player1Back
         })
       },
       player2Index: function() {
         axios.get("/player2s").then((response) => {
           console.log("player 2 index", response);
           this.player2s = response.data
+          this.player2Front = response.data[0].hole1 + response.data[0].hole2 + response.data[0].hole3 + response.data[0].hole4 + response.data[0].hole5 + response.data[0].hole6 + response.data[0].hole7 + response.data[0].hole8 + response.data[0].hole9
+          this.player2Back = response.data[0].hole10 + response.data[0].hole11 + response.data[0].hole12 + response.data[0].hole13 + response.data[0].hole14 + response.data[0].hole15 + response.data[0].hole16 + response.data[0].hole17 + response.data[0].hole18
+          this.player2Total = this.player2Front + this.player2Back
         })
       },
       player3Index: function() {
