@@ -389,7 +389,7 @@
             {{player4.hole9}}
           </div>
           <div class="col">
-            {{frontsidePar}}
+            {{player4Front}}
           </div>
           <div class="col">
             {{player4.hole10}}
@@ -419,10 +419,10 @@
             {{player4.hole18}}
           </div>
           <div class="col">
-            {{backsidePar}}
+            {{player4Back}}
           </div>
           <div class="col">
-            {{totalPar}}
+            {{player4Total}}
           </div>
         </div>
       </div>
@@ -478,16 +478,19 @@
         player1s: [],
         player1Front: 0,
         player1Back: 0,
-        playe1Total: 0,
+        player1Total: 0,
         player2s: [],
         player2Front: 0,
         player2Back: 0,
-        playe2Total: 0,
+        player2Total: 0,
         player3s: [],
         player3Front: 0,
         player3Back: 0,
-        playe3Total: 0,
+        player3Total: 0,
         player4s: [],
+        player4Front: 0,
+        player4Back: 0,
+        player3Total: 0,
       };
     },
     created: function () {
@@ -540,6 +543,9 @@
         axios.get("/player4s").then((response) => {
           console.log("player 4 index", response);
           this.player4s = response.data
+          this.player4Front = response.data[0].hole1 + response.data[0].hole2 + response.data[0].hole3 + response.data[0].hole4 + response.data[0].hole5 + response.data[0].hole6 + response.data[0].hole7 + response.data[0].hole8 + response.data[0].hole9
+          this.player4Back = response.data[0].hole10 + response.data[0].hole11 + response.data[0].hole12 + response.data[0].hole13 + response.data[0].hole14 + response.data[0].hole15 + response.data[0].hole16 + response.data[0].hole17 + response.data[0].hole18
+          this.player4Total = this.player4Front + this.player4Back
         })
       },
     },
