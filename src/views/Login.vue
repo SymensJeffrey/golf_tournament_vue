@@ -9,7 +9,6 @@
                 <div class="row">
                   <div class="col-md-9 col-lg-8 mx-auto">
                     <h3 class="login-heading mb-4">Welcome back!</h3>
-
                     <!-- Sign In Form -->
                     <form v-on:submit.prevent="submit()">
                       <ul>
@@ -40,6 +39,7 @@
 <style>
   .login {
     min-height: 100vh;
+    width: 100%;
   }
 
   .bg-image {
