@@ -2,12 +2,10 @@
   <div class="home">
     <h1 class="title-center-text">{{ message }}</h1>
     <div class="container">
-      <div class="row">
-      </div>
       <!-- Holes -->
       <div class="row">
-        <div class="col">
-          Hole
+        <div class="col first-col">
+          Hole          
         </div>
         <div class="col">
           1
@@ -75,7 +73,7 @@
       </div>
       <!-- Par -->
       <div class="row">
-        <div class="col">
+        <div class="col first-col">
           Par
         </div>
         <div class="col">
@@ -145,8 +143,8 @@
       <!-- Player 1 -->
       <div v-for="player1 in player1s">
         <div class="row">
-          <div class="col">
-            Player 1
+          <div class="col first-col">
+            <input type="text" placeholder="Player 1">
           </div>
           <div class="col">
             {{player1.hole1}}
@@ -216,8 +214,8 @@
       <!-- Player 2 -->
       <div v-for="player2 in player2s">
         <div class="row">
-          <div class="col">
-            Player 2
+          <div class="col first-col">
+            <input type="text" placeholder="Player 2">
           </div>
           <div class="col">
             {{player2.hole1}}
@@ -287,8 +285,8 @@
       <!-- Player 3 -->
       <div v-for="player3 in player3s">
         <div class="row">
-          <div class="col">
-            Player 3
+          <div class="col first-col">
+            <input type="text" placeholder="Player 3">
           </div>
           <div class="col">
             {{player3.hole1}}
@@ -358,8 +356,8 @@
       <!-- Player 4 -->
       <div v-for="player4 in player4s">
         <div class="row">
-          <div class="col">
-            Player 4
+          <div class="col first-col">
+            <input type="text" placeholder="Player 4">
           </div>
           <div class="col">
             {{player4.hole1}}
@@ -432,13 +430,12 @@
 
 <style>
 .col{
-  min-width: 30px;
   border-style: solid;
   border-width: 1px;
 }
 .row{
   text-align: center;
-  min-width: 1200px;
+  min-width: 1500px;
   resize: none;
   overflow: scroll;
 }
