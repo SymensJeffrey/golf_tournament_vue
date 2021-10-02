@@ -1,5 +1,5 @@
 <template>
-  <div class="signup">
+  <!-- <div class="signup">
     <form v-on:submit.prevent="submit()">
       <h1>Signup</h1>
       <ul>
@@ -23,8 +23,83 @@
       </div>
       <input type="submit" value="Submit" />
     </form>
+  </div> -->
+  <div class="login">
+      <div class="container-fluid ps-md-0">
+        <div class="row g-0">
+          <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+          <div class="col-md-8 col-lg-6">
+            <div class="login d-flex align-items-center py-5">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-9 col-lg-8 mx-auto">
+                    <!-- Sign In Form -->
+                    <form v-on:submit.prevent="submit()" class="form">
+                    <h3 class="login-heading mb-4">Sign Up!</h3>
+                      <ul>
+                        <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
+                      </ul>
+                      <div class="form-floating mb-3">
+                        <input v-model="newUserParams.email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Email address</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input v-model="newUserParams.password" type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                        <label for="floatingPassword">Password</label>
+                      </div>
+                      <div class="form-floating mb-3">
+                        <input v-model="newUserParams.password_confirmation" type="password" class="form-control" placeholder="Password Confirmation">
+                        <label for="floatingPassword">Re-enter Password</label>
+                      </div>
+                      <div class="d-grid">
+                        <button class="green-button btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Sign Up</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 </template>
+
+<style>
+  .login {
+    min-height: 100vh;
+  }
+  .form {
+    width: 65%;
+  }
+  .bg-image {
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/64a1aa92-f4a6-4a1d-b8e1-6d04554f55fa/d8594wj-e2e66265-a7d3-44b5-9854-67bff5d6e376.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzY0YTFhYTkyLWY0YTYtNGExZC1iOGUxLTZkMDQ1NTRmNTVmYVwvZDg1OTR3ai1lMmU2NjI2NS1hN2QzLTQ0YjUtOTg1NC02N2JmZjVkNmUzNzYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.gsSotNTlQA9jeNlDU1BK-Q4qnnkzNy0PQTqhY3Xg-l4');
+    background-size: cover;
+    background-position: center;
+    width: 35%
+  }
+
+  .login-heading {
+    font-weight: 300;
+  }
+
+  .btn-login {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .green-button{
+    background-color: rgb(45, 187, 32);
+    border: none;
+  }
+  a {
+    color: rgb(45, 187, 32);
+  }
+  .green-button:hover{
+    background-color: rgb(115, 214, 106);
+  }
+</style>
 
 <script>
   import axios from "axios";
