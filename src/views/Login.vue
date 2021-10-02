@@ -8,9 +8,9 @@
               <div class="container">
                 <div class="row">
                   <div class="col-md-9 col-lg-8 mx-auto">
-                    <h3 class="login-heading mb-4">Welcome back!</h3>
                     <!-- Sign In Form -->
-                    <form v-on:submit.prevent="submit()">
+                    <form v-on:submit.prevent="submit()" class="form">
+                    <h3 class="login-heading mb-4">Welcome back!</h3>
                       <ul>
                         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
                       </ul>
@@ -40,11 +40,14 @@
   .login {
     min-height: 100vh;
   }
+  .form {
+    width: 65%;
+  }
   .bg-image {
     background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/64a1aa92-f4a6-4a1d-b8e1-6d04554f55fa/d8594wj-e2e66265-a7d3-44b5-9854-67bff5d6e376.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzY0YTFhYTkyLWY0YTYtNGExZC1iOGUxLTZkMDQ1NTRmNTVmYVwvZDg1OTR3ai1lMmU2NjI2NS1hN2QzLTQ0YjUtOTg1NC02N2JmZjVkNmUzNzYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.gsSotNTlQA9jeNlDU1BK-Q4qnnkzNy0PQTqhY3Xg-l4');
     background-size: cover;
     background-position: center;
-    width: 45%
+    width: 35%
   }
 
   .login-heading {
