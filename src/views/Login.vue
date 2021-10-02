@@ -24,6 +24,9 @@
                       </div>
                       <div class="d-grid">
                         <button class="green-button btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Sign in</button>
+                        <br>
+                        <p> Dont have an account? </p>
+                          <a href="/signup"> Signup </a>
                       </div>
                     </form>
                   </div>
@@ -63,6 +66,9 @@
   .green-button{
     background-color: rgb(45, 187, 32);
     border: none;
+  }
+  a {
+    color: rgb(45, 187, 32);
   }
   .green-button:hover{
     background-color: rgb(115, 214, 106);
