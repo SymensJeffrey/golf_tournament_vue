@@ -11,9 +11,6 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="/">Leaderboard</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Enter Score</a>
-              </li>
               <li v-if="!isLoggedIn()" class="nav-item">
                 <a class= "nav-link" href="/signup">Signup</a>
               </li>
